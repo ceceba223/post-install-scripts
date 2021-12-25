@@ -39,4 +39,3 @@ sudo pacman -S --noconfirm gimp steam timeshift vlc libreoffice-fresh
 
 # snap installs:
 sudo snap install spotify discord
-sudo snap install sublime-text --classic
