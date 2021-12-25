@@ -1,10 +1,27 @@
 #!/bin/bash
 
-# update the system:
-sudo pacman -Syu
+# creating temp directory:
+mkdir install_temp && cd install_temp
 
-# pacman installs:
-sudo pacman -S --noconfirm git yay wget snapd
+# update the system:
+sudo pacman -Syu --noconfirm
+
+# base-devel:
+sudo pacman -S --noconfirm base-devel
+
+# git:
+sudo pacman -S --noconfirm git
+
+# AUR packages:
+
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si --noconfirm
+cd ..
+
+yay -S --noconfirm snapd wget timeshift
+systemctl enable --now snapd.socket
+ln -s /var/lib/snapd/snap /snap
 
 ### cli tools
 sudo pacman -S --noconfirm bpytop htop ncdu neofetch ranger macchanger
@@ -33,8 +50,11 @@ sudo pacman -S --noconfirm etcher gparted
 ### programming languages
 sudo pacman -S --noconfirm python
 
+# fonts:
+sudo pacman -S ttf-ms-win10
+
 ### utility's
-sudo pacman -S --noconfirm gimp steam timeshift vlc libreoffice-fresh
+sudo pacman -S --noconfirm gimp steam vlc libreoffice-fresh
 
 
 # snap installs:
