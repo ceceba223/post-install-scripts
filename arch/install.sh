@@ -12,14 +12,11 @@ sudo pacman -S --noconfirm base-devel
 # git:
 sudo pacman -S --noconfirm git
 
-#systemctl enable --now snapd.socket
-#ln -s /var/lib/snapd/snap /snap
-
 ### cli tools
 sudo pacman -S --noconfirm bpytop htop ncdu neofetch ranger macchanger
 
 ### terminal emulator
-sudo pacman -S --noconfirm kitty
+sudo pacman -S --noconfirm kitty alacritty
 
 ### run menus
 sudo pacman -S --noconfirm dmenu rofi
@@ -44,7 +41,3 @@ sudo pacman -S --noconfirm python
 
 ### utility's
 sudo pacman -S --noconfirm gimp steam vlc libreoffice-fresh
-
-
-# snap installs:
-sudo snap install spotify discord

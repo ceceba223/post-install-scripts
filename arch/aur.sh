@@ -11,10 +11,8 @@ cd $HOME
 
 # packages:
 PKGS=(
-  'snapd'
   'wget'
   'timeshift'
-  'spotify'
   # fonts:
   'ttf-ms-fonts'
   'nerd-fonts-jet-brains-mono'
